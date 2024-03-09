@@ -1,11 +1,8 @@
 //
 // Created by carlosl on 27/02/24.
 //
-
 #ifndef SOLITARIOENCONSOLA_LISTADOBLEMENTEENLAZADA_H
 #define SOLITARIOENCONSOLA_LISTADOBLEMENTEENLAZADA_H
-
-
 #include "../Carta/Carta.h"
 #include "../Nodo/Nodo.h"
 #include "../Pila/Pila.h"
