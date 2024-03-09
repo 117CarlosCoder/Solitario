@@ -3,7 +3,6 @@
 //
 
 #include "Pila.h"
-#include "../Nodo/Nodo.h"
 #include <iostream>
 #include <utility>
 
@@ -30,6 +29,23 @@ void Pila::insertar(Carta x)
         }
     }
 }
+
+void Pila::ingresar(Carta x)
+{
+        Nodo *nuevo;
+        nuevo = new Nodo();
+    if (x.valor) {
+        nuevo->info = std::move(x);
+        if (raiz == nullptr) {
+            raiz = nuevo;
+            nuevo->sig = nullptr;
+        } else {
+            nuevo->sig = raiz;
+            raiz = nuevo;
+        }
+    }
+}
+
 bool Pila::revisar(string dato){
     Nodo *reco = raiz;
     while (reco != nullptr){
@@ -45,7 +61,7 @@ void Pila::imprimir()
 {
     cout<<'\n';
     Nodo *reco = raiz;
-    cout<<"Pila"<<endl;
+    cout<<"Pila " << numPila <<endl;
     while (reco != nullptr)
     {
         cout << reco->info.carta << " - ";
@@ -82,12 +98,12 @@ Pila::~Pila()
     }
 }
 
-Pila::Nodo * Pila::devolverRaiz() {
+Nodo * Pila::devolverRaiz() {
     return raiz;
 }
 
 int Pila::contador() {
-    contadorNum = 0;
+    int contadorNum = 0;
     Nodo *reco = raiz;
     while (reco != nullptr)
     {
@@ -110,3 +126,26 @@ Carta Pila::mostrarValor()
     }
 }
 
+void Pila::mostrarPosValor(Pila *pilacopia)
+{
+    Carta informacion;
+    Nodo *reco = raiz;
+    while (reco!= nullptr){
+        informacion = reco->info;
+        pilacopia->ingresar(informacion);
+        reco = reco->sig;
+
+    }
+}
+
+void Pila::borrar()
+{
+    Nodo *reco;
+    while(raiz != nullptr)
+    {
+        reco = raiz;
+        raiz = raiz->sig;
+        delete reco;
+    }
+
+}

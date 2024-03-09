@@ -7,26 +7,25 @@
 
 
 #include "../Carta/Carta.h"
+#include "../Nodo/Nodo.h"
 
 class Pila {
-    class Nodo {
-    public:
-        Carta info;
-        Nodo *sig;
-    };
 
     Nodo *raiz;
-    int contadorNum = 0;
     int ordenamiento = 0;
 public:
+    int numPila = 0;
     Pila();
     ~Pila();
     void insertar(Carta x);
+    void ingresar(Carta x);
     Carta extraer();
     bool revisar(string dato);
     void imprimir();
+    void borrar();
     int contador();
     Carta mostrarValor();
+    void mostrarPosValor(Pila *pila);
     Nodo * devolverRaiz();
 };
 

@@ -3,6 +3,7 @@
 //
 
 #include "Cola.h"
+#include "../Pila/Pila.h"
 #include<iostream>
 #include <utility>
 
@@ -31,7 +32,7 @@ void Cola::imprimir()
     std::cout << '\n';
     Nodo* reco = (raiz!= nullptr)? raiz: new Nodo();
     int contador = 0;
-    cout << "Cola " <<endl;
+    cout << "Cola " << numCola <<endl;
     while (reco != nullptr) {
         contador ++;
         if (contador == 1){
@@ -102,4 +103,29 @@ Carta Cola::mostrarValor()
     {
         return {};
     }
+}
+
+void Cola::mostrarPosValor(Pila *pilacopia )
+{
+    Carta informacion;
+    Nodo *reco = raiz;
+    while (reco!= nullptr){
+            informacion = reco->info;
+            pilacopia->ingresar(informacion);
+            reco = reco->sig;
+
+    }
+
+}
+
+void Cola::borrar()
+{
+    Nodo *reco;
+    while(raiz != nullptr)
+    {
+        reco = raiz;
+        raiz = raiz->sig;
+        delete reco;
+    }
+
 }

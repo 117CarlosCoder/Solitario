@@ -11,6 +11,8 @@
 #include "ListaDoblementeEnlazada.h"
 #include "string"
 #include "iostream"
+#include "../Pila/Pila.h"
+
 using namespace std;
 
 ListaDoblementeEnlazada::ListaDoblementeEnlazada()
@@ -19,6 +21,18 @@ ListaDoblementeEnlazada::ListaDoblementeEnlazada()
 }
 
 ListaDoblementeEnlazada::~ListaDoblementeEnlazada()
+{
+    Nodo *reco = raiz;
+    Nodo *bor;
+    while (reco != nullptr)
+    {
+        bor = reco;
+        reco = reco->sig;
+        delete bor;
+    }
+}
+
+void ListaDoblementeEnlazada::borrarTodo()
 {
     Nodo *reco = raiz;
     Nodo *bor;
@@ -209,7 +223,7 @@ void ListaDoblementeEnlazada::imprimir()
 {
     int contar = 0;
     Nodo *reco = raiz;
-    cout << "Baraja " <<endl;
+    cout << "Baraja  "<< numLista<<endl;
     while (reco != nullptr)
     {
         contar++;
@@ -225,6 +239,7 @@ void ListaDoblementeEnlazada::imprimir()
     }
     cout << "\n";
 }
+
 
 
 bool ListaDoblementeEnlazada::existe(string x)
@@ -264,4 +279,16 @@ Carta ListaDoblementeEnlazada::consultar(int pos)
     return {};
    }
 
+void ListaDoblementeEnlazada::mostrarPosValor(Pila *pilacopia)
+{
+    Carta informacion;
+        Nodo *reco = raiz;
+        while (reco != nullptr) {
+            informacion = reco->info;
+            pilacopia->ingresar(informacion);
+            reco = reco->sig;
+
+
+    }
+}
 
