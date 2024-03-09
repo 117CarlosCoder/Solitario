@@ -85,18 +85,6 @@ build CMakeFiles/SolitarioEnConsola.dir/Pila/Pila.cpp.o: CXX_COMPILER__Solitario
   OBJECT_DIR = CMakeFiles/SolitarioEnConsola.dir
   OBJECT_FILE_DIR = CMakeFiles/SolitarioEnConsola.dir/Pila
 
-build CMakeFiles/SolitarioEnConsola.dir/SwitchColas/SwitchCola1.cpp.o: CXX_COMPILER__SolitarioEnConsola_unscanned_Debug /home/carlosl/CLionProjects/SolitarioEnConsola/SwitchColas/SwitchCola1.cpp || cmake_object_order_depends_target_SolitarioEnConsola
-  DEP_FILE = CMakeFiles/SolitarioEnConsola.dir/SwitchColas/SwitchCola1.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/SolitarioEnConsola.dir
-  OBJECT_FILE_DIR = CMakeFiles/SolitarioEnConsola.dir/SwitchColas
-
-build CMakeFiles/SolitarioEnConsola.dir/SwitchColas/SwitchCola2.cpp.o: CXX_COMPILER__SolitarioEnConsola_unscanned_Debug /home/carlosl/CLionProjects/SolitarioEnConsola/SwitchColas/SwitchCola2.cpp || cmake_object_order_depends_target_SolitarioEnConsola
-  DEP_FILE = CMakeFiles/SolitarioEnConsola.dir/SwitchColas/SwitchCola2.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/SolitarioEnConsola.dir
-  OBJECT_FILE_DIR = CMakeFiles/SolitarioEnConsola.dir/SwitchColas
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SolitarioEnConsola
@@ -105,7 +93,7 @@ build CMakeFiles/SolitarioEnConsola.dir/SwitchColas/SwitchCola2.cpp.o: CXX_COMPI
 #############################################
 # Link the executable SolitarioEnConsola
 
-build SolitarioEnConsola: CXX_EXECUTABLE_LINKER__SolitarioEnConsola_Debug CMakeFiles/SolitarioEnConsola.dir/main.cpp.o CMakeFiles/SolitarioEnConsola.dir/ListaDoblementeEnlazada/ListaDoblementeEnlazada.cpp.o CMakeFiles/SolitarioEnConsola.dir/Nodo/Nodo.cpp.o CMakeFiles/SolitarioEnConsola.dir/Carta/Carta.cpp.o CMakeFiles/SolitarioEnConsola.dir/Cola/Cola.cpp.o CMakeFiles/SolitarioEnConsola.dir/Pila/Pila.cpp.o CMakeFiles/SolitarioEnConsola.dir/SwitchColas/SwitchCola1.cpp.o CMakeFiles/SolitarioEnConsola.dir/SwitchColas/SwitchCola2.cpp.o
+build SolitarioEnConsola: CXX_EXECUTABLE_LINKER__SolitarioEnConsola_Debug CMakeFiles/SolitarioEnConsola.dir/main.cpp.o CMakeFiles/SolitarioEnConsola.dir/ListaDoblementeEnlazada/ListaDoblementeEnlazada.cpp.o CMakeFiles/SolitarioEnConsola.dir/Nodo/Nodo.cpp.o CMakeFiles/SolitarioEnConsola.dir/Carta/Carta.cpp.o CMakeFiles/SolitarioEnConsola.dir/Cola/Cola.cpp.o CMakeFiles/SolitarioEnConsola.dir/Pila/Pila.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/SolitarioEnConsola.dir
   POST_BUILD = :

@@ -1,0 +1,33 @@
+# Variables
+CPP = g++
+TARGET = SolitarioEnConsola
+
+# Regla para compilar todo
+all: $(TARGET)
+
+# Regla para enlazar los objetos y crear el ejecutable
+$(TARGET): main.o ListaDoblementeEnlazada.o Nodo.o Carta.o Cola.o Pila.o
+	$(CPP) main.o ListaDoblementeEnlazada.o Nodo.o Carta.o Cola.o Pila.o  -o $(TARGET)
+
+# Reglas para compilar los archivos fuente
+main.o: main.cpp
+	$(CPP) -c main.cpp
+
+ListaDoblementeEnlazada.o: ListaDoblementeEnlazada/ListaDoblementeEnlazada.cpp ListaDoblementeEnlazada/ListaDoblementeEnlazada.h
+	$(CPP) -c ListaDoblementeEnlazada/ListaDoblementeEnlazada.cpp
+
+Nodo.o: Nodo/Nodo.cpp Nodo/Nodo.h
+	$(CPP) -c Nodo/Nodo.cpp
+
+Carta.o: Carta/Carta.cpp Carta/Carta.h
+	$(CPP) -c Carta/Carta.cpp
+
+Cola.o: Cola/Cola.cpp Cola/Cola.h
+	$(CPP) -c Cola/Cola.cpp
+
+Pila.o: Pila/Pila.cpp Pila/Pila.h
+	$(CPP) -c Pila/Pila.cpp
+
+# Regla para limpiar los archivos objeto y el ejecutable
+clean:
+	rm -f *.o $(TARGET)
