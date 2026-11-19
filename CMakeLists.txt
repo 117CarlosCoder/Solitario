@@ -3,7 +3,7 @@ project(SolitarioEnConsola)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(main.cpp
+add_executable(SolitarioEnConsola
         ListaDoblementeEnlazada/ListaDoblementeEnlazada.h
         ListaDoblementeEnlazada/ListaDoblementeEnlazada.cpp
         Nodo/Nodo.h
@@ -13,4 +13,5 @@ add_executable(main.cpp
         Cola/Cola.h
         Cola/Cola.cpp
         Pila/Pila.h
-        Pila/Pila.cpp)
+        Pila/Pila.cpp
+        main.cpp)

@@ -1,3 +1,0 @@
-/home/carlosl/CLionProjects/SolitarioEnConsola/cmake-build-debug/CMakeFiles/SolitarioEnConsola.dir
-/home/carlosl/CLionProjects/SolitarioEnConsola/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/carlosl/CLionProjects/SolitarioEnConsola/cmake-build-debug/CMakeFiles/rebuild_cache.dir
